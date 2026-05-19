@@ -453,5 +453,9 @@ ro.vendor.mtk_thin_md_telephony_support_mode=0
 ro.logd.kernel=false
 
 import /vendor/build_${ro.boot.product.hardware.sku}.prop
-# end of file
 # miodm_tanzanite end
+
+# ZRAM writeback
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
