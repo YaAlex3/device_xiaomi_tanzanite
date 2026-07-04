@@ -102,7 +102,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/mt6789/libcam.utils.sensorprovider.so',
         'vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq_aidl-impl.so'
     ): blob_fixup()
-        .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so'),
+        .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so')
+        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
     (
         'vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl',
         'vendor/lib64/hw/audio.primary.mediatek.so',

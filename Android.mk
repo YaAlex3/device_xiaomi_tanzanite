@@ -435,7 +435,7 @@ VENDOR_PLATFORM_LINKS := \
         $(TARGET_OUT_VENDOR)/lib64/libmtkcam_hal_aidl_device.so \
         $(TARGET_OUT_VENDOR)/lib64/libmtkcam_hal_aidl_utils.so \
         $(TARGET_OUT_VENDOR)/lib64/libDR.so \
-        $(TARGET_OUT_VENDOR)/lib64/libmnl.so \
+        $(TARGET_OUT_VENDOR)/lib64/libmnl_mtk.so \
         $(TARGET_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator-V2-mediatek.so \
         $(TARGET_OUT_VENDOR)/lib64/hw/android.hardware.graphics.allocator-V2-mediatek.so \
         $(TARGET_OUT_VENDOR)/lib/hw/mapper.mediatek.so \
