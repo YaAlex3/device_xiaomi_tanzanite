@@ -1630,7 +1630,7 @@ vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libcodec2_vpp_ft_plugin.so
 vendor/lib64/libcodec2_vpp_roi_plugin.so
 vendor/lib64/libcodec2_vpp_chdr_plugin.so
-vendor/lib64/libformatter.so
+vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so;FIX_SONAME
 
 # Chipinfo
 vendor/bin/chipinfo
