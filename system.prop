@@ -41,6 +41,13 @@ ro.dalvik.vm.native.bridge=0
 
 # Radio
 ro.radio.device_type=1
+ro.vendor.mtk_telephony_add_on_policy=0
+ro.vendor.imeisv=21
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 
 # MTKPerf
 ro.mtk_perf_simple_start_win=1

@@ -413,6 +413,9 @@ debug.sf.earlyGl.app.duration=16600000
 vendor.debug.sf.latch_unsignaled=1
 
 # Radio
+persist.vendor.ims_support=1
+persist.vendor.vilte_support=1
+persist.vendor.volte_support=1
 persist.radio.multisim.config=dsds
 persist.vendor.radio.msimmode=dsds
 ro.vendor.radio.max.multisim=dsds
