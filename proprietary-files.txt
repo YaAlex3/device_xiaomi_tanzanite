@@ -1565,7 +1565,6 @@ vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
-vendor/lib64/libladder.so
 vendor/lib64/libmml.so
 vendor/lib64/libpixelflinger.so
 vendor/lib64/mt6789/libmtk_mali_user.so
