@@ -1563,7 +1563,6 @@ vendor/lib64/libOpenCL.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
-vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
 vendor/lib64/libpixelflinger.so
