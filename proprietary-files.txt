@@ -2054,10 +2054,8 @@ vendor/mitee/ta/e97c270e-a5c4-4c58-bcd3384a2fa2539e.ta
 # Wi-Fi
 vendor/bin/hw/tetheroffloadservice
 vendor/bin/conninfra_loader
-vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
-vendor/etc/init/wlan_assistant.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/vintf/manifest/CommandService.xml
 vendor/lib64/libforkexecwrap.so
