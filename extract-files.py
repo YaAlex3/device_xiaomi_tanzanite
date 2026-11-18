@@ -59,12 +59,12 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libbluetooth_audio_session_aidl_mtk.so'
     ): blob_fixup()
         .replace_needed('android.hardware.bluetooth.audio-V5-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so')
-        .replace_needed('vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so', 'vendor.mediatek.hardware.bluetooth.audio-V3-ndk.so'),
+        .replace_needed('vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so', 'vendor.mediatek.hardware.bluetooth.audio-V4-ndk.so'),
     (
         'vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so',
         'vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so',
     ): blob_fixup()
-        .replace_needed('vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so', 'vendor.mediatek.hardware.bluetooth.audio-V3-ndk.so'),
+        .replace_needed('vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so', 'vendor.mediatek.hardware.bluetooth.audio-V4-ndk.so'),
     (
         'system_ext/bin/hw/android.hardware.audio.parameter_parser.service'
     ): blob_fixup()
