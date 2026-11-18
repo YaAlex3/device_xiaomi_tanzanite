@@ -74,7 +74,13 @@ blob_fixups: blob_fixups_user_type = {
     (
         "vendor/lib64/android.hardware.audio.core-impl-mediatek.so",
     ): blob_fixup()
+        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so')
         .add_needed("libaudioutils_shim.so"),
+    (
+        'vendor/bin/hw/android.hardware.audio.service-aidl.mediatek',
+        'vendor/lib64/hw/android.hardware.soundtrigger3-impl.so',
+    ): blob_fixup()
+        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     (
         'vendor/lib64/libmorpho_Ldc.so',
         'vendor/lib64/libTrueSight.so',

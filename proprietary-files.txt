@@ -83,6 +83,7 @@ system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc
 system/lib64/av-audio-types-aidl-ndk.so:system/lib64/av-audio-types-aidl-ndk-vendor.so;FIX_SONAME
 vendor/lib64/android.hardware.audio.core-impl-mediatek.so
 vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so
+vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;DISABLE_DEPS;FIX_SONAME
 vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mediatek.so
