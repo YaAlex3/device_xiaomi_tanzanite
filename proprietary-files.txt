@@ -1630,8 +1630,6 @@ vendor/lib64/libcodec2_vpp_chdr_plugin.so
 vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so;FIX_SONAME
 
 # Chipinfo
-vendor/bin/chipinfo
-vendor/etc/init/chipinfo_init.rc
 
 # Media (Common)
 vendor/bin/mt6789/v3avpud-64b.mt6789:vendor/bin/mt6789/v3avpud.mt6789;SYMLINK=vendor/bin/v3avpud
