@@ -255,7 +255,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libmtkperf_client \
     libmtkperf_client_vendor \
-    libpowerhalwrap_vendor
+    libpowerhalwrap_vendor \
+    vendor.mediatek.hardware.mtkpower-service.stub
+
+$(call soong_config_set_bool,libmtkperf_client,powerhalwrap_aidl,true)
 
 PRODUCT_PACKAGES += \
     PowerOffAlarm

@@ -326,6 +326,15 @@
       "Type": "Property"
     },
     {
+      "Name": "PowerHALAudioState",
+      "Path": "vendor.powerhal.audio",
+      "Values": [
+        "AUDIO_STREAMING_LOW_LATENCY",
+        ""
+      ],
+      "Type": "Property"
+    },
+    {
       "Name": "Dex2oatThreads",
       "Path": "vendor.powerhal.dalvik.vm.dex2oat-threads",
       "Values": [
@@ -402,6 +411,12 @@
       "Node": "PowerHALRenderingState",
       "Duration": 0,
       "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "PowerHALAudioState",
+      "Duration": 0,
+      "Value": "AUDIO_STREAMING_LOW_LATENCY"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",

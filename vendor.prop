@@ -3,6 +3,7 @@ ro.vendor.composer_version=3.4
 
 # Audio
 ro.config.vc_call_vol_steps=15
+vendor.audio.powerhal.latency.ul=true
 ro.vendor.audio_para_version=O7-AudioParam-global-V02-20251105
 ro.vendor.audio.soundfx.type=mi
 ro.vendor.audio.soundfx.usb=true
