@@ -423,9 +423,8 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Vibrator
-#PRODUCT_PACKAGES += \
-#    android.hardware.vibrator-service.mediatek
-#
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
 
 TARGET_USES_VULKAN := true
 
