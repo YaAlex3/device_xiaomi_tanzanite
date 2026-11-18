@@ -109,7 +109,6 @@ vendor/lib64/libaudiotoolkit_vendor.so
 vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
 vendor/lib64/hw/android.hardware.soundtrigger3-impl.so
 vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libmisoundcrossfade.so;FIX_SONAME
