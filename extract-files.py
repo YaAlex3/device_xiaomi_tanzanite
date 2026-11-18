@@ -78,7 +78,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed("libaudioutils_shim.so"),
     (
         'vendor/bin/hw/android.hardware.audio.service-aidl.mediatek',
+        'vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so',
         'vendor/lib64/hw/android.hardware.soundtrigger3-impl.so',
+        'vendor/lib64/soundfx/libdlbvolaidl.so',
+        'vendor/lib64/soundfx/libswdapaidl.so',
+        'vendor/lib64/soundfx/libswgamedapaidl.so',
+        'vendor/lib64/soundfx/libswspatializeraidl.so',
     ): blob_fixup()
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     (
