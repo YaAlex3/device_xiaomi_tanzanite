@@ -19,17 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 # Keys
 $(call inherit-product-if-exists, vendor/private/keys/keys.mk)
 
-# Dolby
-# $(call inherit-product, hardware/dolby/dolby.mk)
-
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 2400
-
-# GMS
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
-TARGET_ENABLE_BLUR := false
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2026-05-01
@@ -43,6 +35,7 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
     boot \
     dtbo \
+    init_boot \
     vendor_boot \
     odm_dlkm \
     system \
@@ -127,12 +120,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-#PRODUCT_COPY_FILES += \
-#    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
-#    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-#    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
-#    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.ranging-service.default \
@@ -140,17 +127,21 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.mediatek-mali \
-    android.frameworks.displayservice@1.0 \
-    android.hardware.media.omx@1.0 \
-    android.hardware.oemlock@1.0.vendor:64 \
-    android.system.suspend-service \
+    android.hardware.memtrack-service.mediatek
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.vulkan.compute-0.prebuilt.xml \
+    android.hardware.vulkan.level-1.prebuilt.xml \
+    android.hardware.vulkan.version-1_3.prebuilt.xml \
+    android.software.opengles.deqp.level-2024-03-01.prebuilt.xml \
+    android.software.vulkan.deqp.level-2024-03-01.prebuilt.xml
+
+# IR
+PRODUCT_PACKAGES += \
     android.hardware.ir-service.example \
-    LunarisDolby
-# PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@3.4-service \
-    android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml \
-    android.software.opengles.deqp.level-2021-03-01.prebuilt.xml
 
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0
@@ -218,13 +209,6 @@ PRODUCT_PACKAGES += \
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
-
-# Media (C2)
-# $(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,false)
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2-mtk-service \
-    libeffects:64 \
-    libeffectsconfig.vendor:64
 
 # Media
 PRODUCT_COPY_FILES += \
