@@ -1,48 +1,46 @@
 {
   "Sensors": [
     {
-      "Name": "CPU",
+      "Name": "CPU_therm",
       "Type": "CPU",
-      "ZoneName": "soc_max",
       "HotThreshold": ["NaN", "NaN", "NaN", 85.0, 90.0, 100.0, 117.0],
-      "VrThreshold": "85.0",
+      "VrThreshold": 50.0,
       "Multiplier": 0.001
     },
     {
-      "Name": "GPU",
-      "Type": "GPU",
-      "ZoneName": "soc_max",
-      "HotThreshold": ["NaN", "NaN", "NaN", 85.0, 90.0, 100.0, 117.0],
-      "VrThreshold": "85.0",
+      "Name": "ltepa_ntc",
+      "Type": "POWER_AMPLIFIER",
+      "HotThreshold": ["NaN", "NaN", "NaN", 68.0, 90.0, 100.0, 110.0],
+      "VrThreshold": "NaN",
       "Multiplier": 0.001
     },
     {
-      "Name": "battery",
+      "Name": "charge_therm",
       "Type": "BATTERY",
       "HotThreshold": ["NaN", "NaN", "NaN", 50.0, 55.0, 59.0, 60.0],
-      "VrThreshold": "50.0",
+      "VrThreshold": 50.0,
       "Multiplier": 0.001
     },
     {
       "Name": "ap_ntc",
       "Type": "SKIN",
       "HotThreshold": ["NaN", "NaN", "NaN", 50.0, 70.0, 80.0, 90.0],
-      "VrThreshold": "50.0",
-      "Multiplier": 0.001
+      "VrThreshold": 50.0,
+      "Multiplier": 0.001,
+      "Monitor": true
     },
     {
-      "Name": "NPU",
-      "Type": "NPU",
-      "ZoneName": "soc_max",
-      "HotThreshold": ["NaN", "NaN", "NaN", 85.0, 90.0, 100.0, 117.0],
-      "VrThreshold": "NaN",
+      "Name": "battery",
+      "Type": "BATTERY",
+      "HotThreshold": ["NaN", "NaN", "NaN", 50.0, 55.0, 59.0, 60.0],
+      "VrThreshold": 50.0,
       "Multiplier": 0.001
     }
   ],
   "CoolingDevices": [
     {
-      "Name": "thermal-devfreq-0",
-      "Type": "CPU"
+      "Name": "lcd-backlight",
+      "Type": "COMPONENT"
     },
     {
       "Name": "mutt-pa1",
