@@ -83,6 +83,13 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_KERNEL_DIR)/ven
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_KERNEL_DIR)/vendor_ramdisk.modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_KERNEL_DIR)/vendor_ramdisk.modules.load.recovery))
 
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(BOARD_KERNEL_MODULE_DIR)/fmradio_drv_mt6631_6635.ko \
+    $(BOARD_KERNEL_MODULE_DIR)/gps_drv_stp.ko \
+    $(BOARD_KERNEL_MODULE_DIR)/wlan_drv_gen4m_6789.ko \
+    $(BOARD_KERNEL_MODULE_DIR)/wmt_chrdev_wifi.ko \
+    $(BOARD_KERNEL_MODULE_DIR)/wmt_drv.ko
+
 BOARD_KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/prebuilts
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/prebuilts/dtbo.img
