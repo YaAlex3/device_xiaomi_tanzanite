@@ -17,7 +17,6 @@ echo "========================================="
 # Array of patches: "Destination_Repo_Path Patch_File_Name"
 PATCHES=(
     "system/core/ fastboot_lock_bypass.patch"
-    "frameworks/base/ make_GhbmIlluminationListener_public.patch"
 )
 
 for entry in "${PATCHES[@]}"; do
