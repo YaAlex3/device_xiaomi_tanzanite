@@ -17,6 +17,7 @@ echo "========================================="
 # Array of patches: "Destination_Repo_Path Patch_File_Name"
 PATCHES=(
     "system/core/ fastboot_lock_bypass.patch"
+    "vendor/lineage/ kernel_manifest_yaalex.patch"
 )
 
 for entry in "${PATCHES[@]}"; do

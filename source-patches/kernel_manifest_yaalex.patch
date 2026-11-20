@@ -1,0 +1,36 @@
+From 2c6badd99a1c9d32377c6944960697d3efad8b1e Mon Sep 17 00:00:00 2001
+From: YaAlex <yaalex113@gmail.com>
+Date: Fri, 20 Nov 2026 12:24:15 +0200
+Subject: [PATCH] build_kernel: use YaAlex3 kernel manifest repos
+
+Fetch kernel manifests from the YaAlex3 GitHub org and drop the
+android_ prefix from the manifest repository name.
+---
+ build/envsetup.sh | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/build/envsetup.sh b/build/envsetup.sh
+index 7a8d1d9..89fe57f 100644
+--- a/build/envsetup.sh
++++ b/build/envsetup.sh
+@@ -975,7 +975,7 @@ function build_kernel() {
+     pushd "${KERNEL_BUILD_TOP}" > /dev/null
+     if [[ "${SKIP_KERNEL_SYNC}" != "true" && "${SKIP_KERNEL_SYNC}" != "1" ]]; then
+         echo "Syncing ${KERNEL_BUILD_TOP}"
+-        local target_kernel_manifest=$(echo android_kernel_${target_kernel_source}_manifest | tr / _)
++        local target_kernel_manifest=$(echo kernel_${target_kernel_source}_manifest | tr / _)
+         local repo_init_args=("-b" "${lineage_version}")
+         if [ -n "${LINEAGE_MIRROR}" ]; then
+             repo_init_args+=("--reference" "${LINEAGE_MIRROR}")
+@@ -984,7 +984,7 @@ function build_kernel() {
+             repo_init_args+=("--repo-rev" "${REPO_VERSION}")
+         fi
+ 
+-        yes | repo init -u https://github.com/LineageOS/${target_kernel_manifest}.git ${repo_init_args[@]} || [ $? -eq 141 ]
++        yes | repo init -u https://github.com/YaAlex3/${target_kernel_manifest}.git ${repo_init_args[@]} || [ $? -eq 141 ]
+         if [ $? -ne 0 ]; then
+             echo "Kernel source repo init failed"
+             popd > /dev/null
+-- 
+2.56.0
+
