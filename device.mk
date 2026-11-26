@@ -409,5 +409,9 @@ PRODUCT_PACKAGES += \
 
 TARGET_USES_VULKAN := true
 
+# Widevine fix
+PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
+    $(LOCAL_PATH)/configs/linker.config.json
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/tanzanite/tanzanite-vendor.mk)

@@ -1405,6 +1405,7 @@ vendor/etc/dsi_o7_38_0c_0a_dsc_vdo_mi.xml
 vendor/etc/screen_light.xml
 
 # DRM (Digital Rights Management)
+vendor/apex/com.google.android.widevine.nonupdatable.apex
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib64/liboemcrypto.so
