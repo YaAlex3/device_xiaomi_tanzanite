@@ -40,6 +40,9 @@ genfscon sysfs /devices/platform/hq_chg_manager/power_supply/usb/wakeup25 u:obje
 genfscon sysfs /devices/platform/hq_chg_manager/power_supply/battery/wakeup26 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/hq_chg_manager/power_supply/charger/wakeup27 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/hq_chg_manager/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11017000.i2c/i2c-5/5-0062/wakeup/wakeup21 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11017000.i2c/i2c-5/5-0062/tcpc/type_c_port0/wakeup20 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11017000.i2c/i2c-5/5-0061/wakeup/wakeup22 u:object_r:sysfs_wakeup:s0
 
 # USB
 genfscon sysfs /devices/platform/rt-pd-manager/typec/port0                         u:object_r:sysfs_usb_nonplat:s0

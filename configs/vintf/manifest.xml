@@ -248,5 +248,14 @@
     <hal format="aidl">
         <name>vendor.xiaomi.hardware.vsimapp</name>
         <fqname>IVSIMService/default</fqname>
-    </hal>
+  </hal>
+  <hal format="hidl">
+    <name>android.hidl.manager</name>
+    <transport>hwbinder</transport>
+    <version>1.2</version>
+    <interface>
+      <name>IServiceManager</name>
+      <instance>default</instance>
+    </interface>
+  </hal>
 </manifest>

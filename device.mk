@@ -379,7 +379,7 @@ include $(LOCAL_PATH)/vendor_logtag.mk
 
 # Sku properties
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/sku/,$(TARGET_COPY_OUT_VNDOR)/)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/sku/,$(TARGET_COPY_OUT_VENDOR)/)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -408,6 +408,10 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
 TARGET_USES_VULKAN := true
+
+# Widevine fix
+PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
+    $(LOCAL_PATH)/configs/linker.config.json
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/tanzanite/tanzanite-vendor.mk)
